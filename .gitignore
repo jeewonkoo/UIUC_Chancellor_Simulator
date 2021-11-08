@@ -35,5 +35,5 @@ build/
 *.out
 *.app
 
-# Macintosh
+# Macintosh, not sure if we need it 
 .DS_Store
