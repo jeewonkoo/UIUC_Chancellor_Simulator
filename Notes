@@ -1,0 +1,43 @@
+UIUC theme
+
+Prime Factors:
+Amount of Funding
+Alumni
+State funding
+Reputation
+US news ranking
+Salary 
+Employment rate 
+Student life 
+Campus safety 
+Living conditions 
+Food 
+Education quality
+Faculty
+members
+
+Ultimate goal : 
+Stay president for as long as possible
+If any of category goes less or equal to 0, you lose 
+
+Decision making: 
+2 decisions per day
+Player can make one decision own choice
+The other decision is made by dice randomly 
+Decisions can influence other decisions
+
+Emails about funding, reputation, student life or etc. Choose which decision want to make based on email 
+
+The game goes harder 
+
+Algorithms:
+
+Queue of linked lists for decisions.
+
+https://docs.google.com/spreadsheets/d/1sOsMLZ_R_S0BLy6NC1w8iBi_tp0VVQgDs_4seRPuD20/edit#gid=0
+
+
+Email Interface
+3 email per day
+
+Database for event
