@@ -19,3 +19,6 @@ void School::SetStudent_life(int student_life){student_life_=student_life;}
 void School::Decide(){}
 void School::SeeFaculty(){}
 void School::GetMonthlyReport(){}
+
+
+//trying to creat own branch
