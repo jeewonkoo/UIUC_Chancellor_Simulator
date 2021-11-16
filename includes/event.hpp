@@ -1,19 +1,21 @@
+#ifndef EVENT_HPP
+#define EVENT_HPP
 #include <string>
-using namespace std;
+
 
 struct Event{
     int id;
-    string text;
-    int 1_funding;
-    int 1_reputation;
-    int 1_student_life;
+    std::string text;
+    int funding1;
+    int reputation1;
+    int student_life1;
 
-    int 2_funding;
-    int 2_reputation;
-    int 2_student_life;
+    int funding2;
+    int reputation2;
+    int student_life2;
 
     bool AddRemove; 
-    string faculty;
+    std::string faculty;
 
 
     double multiplier1;
@@ -25,3 +27,4 @@ struct Event{
     Event* futureEvent2;
 
 };
+#endif
