@@ -1,0 +1,4 @@
+#ifndef MONTHLYREPORT_HPP
+#define MONTHLYREPORT_HPP
+
+#endif
