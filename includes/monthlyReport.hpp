@@ -4,6 +4,8 @@
 struct MonthlyReport {
     int ranking; 
     int alumni_donation; 
-}
+};
 
 #endif
+
+// creating own branch
