@@ -1,0 +1,26 @@
+-- Create a new database called 'TutorialDB'
+-- Connect to the 'master' database to run this snippet
+USE master
+GO
+IF NOT EXISTS (
+   SELECT name
+   FROM sys.databases
+   WHERE name = N'EventDB'
+)
+CREATE DATABASE [EventDB]
+GO
+
+-- Create a new table called 'TableName' in schema 'SchemaName'
+-- Drop the table if it already exists
+IF OBJECT_ID('Events', 'U') IS NOT NULL
+DROP TABLE TableName
+GO
+-- Create the table in the specified schema
+CREATE TABLE TableName
+(
+   EventId INT NOT NULL PRIMARY KEY, -- primary key column
+   Question [NVARCHAR](50) NOT NULL,
+   Column2 [NVARCHAR](50) NOT NULL
+   -- specify more columns here
+);
+GO
