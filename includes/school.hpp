@@ -6,24 +6,24 @@
 
 class School {
     public:
-    School(std::string str);
+    School() = default;
     std::vector<std::string> GetFaculty();
-    void AddFaculty();
-    void RemoveFaculty();
+    void AddFaculty(std::string name);
+    void RemoveFaculty(std::string name);
 	int GetFunding();
 	int GetReputation();
 	int GetStudent_life();
-	void SetFunding();
-	void SetReputation();
-	void SetStudent_life();
+	void SetFunding(int funding);
+	void SetReputation(int reputation);
+	void SetStudent_life(int student_life);
     void Decide();
     void SeeFaculty();
     void GetMonthlyReport();
 
     private:
-    int funding_;
-    int reputation_;
-    int student_life_;
+    int funding_=0;
+    int reputation_=0;
+    int student_life_=0;
     std::vector<std::string> faculty_;
 
 
