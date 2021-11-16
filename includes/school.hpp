@@ -1,8 +1,8 @@
 #ifndef SCHOOL_HPP
 #define SCHOOL_HPP
-#include <string>
-#include <vector>
-
+#include"event.hpp"
+#include "faculty.hpp"
+#include "monthlyReport.hpp"
 
 class School {
     public:
