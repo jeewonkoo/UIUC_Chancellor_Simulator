@@ -1,9 +1,10 @@
 #ifndef SCHOOL_HPP
 #define SCHOOL_HPP
 #include"event.hpp"
-#include "faculty.hpp"
-#include "monthlyReport.hpp"
 
+#include "monthlyReport.hpp"
+#include <iostream>
+#include <queue>
 class School {
     public:
     School() = default;
@@ -16,7 +17,7 @@ class School {
 	void SetFunding(int funding);
 	void SetReputation(int reputation);
 	void SetStudent_life(int student_life);
-    void Decide();
+    void Decide(Event* event);
     void SeeFaculty();
     void GetMonthlyReport();
 
