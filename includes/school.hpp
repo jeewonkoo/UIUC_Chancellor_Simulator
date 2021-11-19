@@ -19,13 +19,14 @@ class School {
 	void SetStudent_life(int student_life);
     void Decide(Event* event);
     void SeeFaculty();
-    void GetMonthlyReport();
+    MonthlyReport GetMonthlyReport();
 
     private:
     int funding_=0;
     int reputation_=0;
     int student_life_=0;
     std::vector<std::string> faculty_;
+    MonthlyReport monthly_report_;
 
 
 

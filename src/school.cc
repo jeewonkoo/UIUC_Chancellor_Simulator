@@ -25,6 +25,15 @@ void School::Decide(Event* event){
     funding_+= tmp[0];
     reputation_ += tmp[1];
     student_life_+=tmp[2];
+    if (funding_>=0) {
+        std::cout<< "$"<<tmp[0] << " amount of funding successfully added";
+    }
+    else if (reputation_>=0) {
+        std::cout<< "School reputation is increased by "<< tmp[1];
+    }
+    else if (student_life_>=0) {
+        std::cout<<"Student life is increased by " << tmp[2];
+    }
     if (funding_<0) {
         std::cout<<"sucker u fkup the school funding";
     }
@@ -40,4 +49,4 @@ void School::SeeFaculty(){
         std::cout<<faculty_[a]<<std::endl;
     }
 }
-void School::GetMonthlyReport(){}
+MonthlyReport School::GetMonthlyReport(){ return monthly_report_; }
