@@ -25,3 +25,14 @@ The **email interface** will be implemented as a randomized (determined by a ran
 The **decision making function** will be implemented additively with a threshhold to determine whether the outcome will be good or bad. Once a linked list reaches the end, the outcome will be reflected on the 4 primary stats.
 
 There will be an **event database** which is an Relational database seperate from the c++ code. The main program will be able to at random get events from the event table
+
+#BUILD INSTRUCTIONS
+
+Use 
+'''
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install mysqlclient
+sudo apt-get install libmysqlcppconn-dev
+'''
+
