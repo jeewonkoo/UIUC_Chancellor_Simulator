@@ -26,7 +26,7 @@ void School::Decide(Event* event){
     reputation_ += tmp[1];
     student_life_+=tmp[2];
     if (funding_>=0) {
-        std::cout<< tmp[0] << " amount of funding successfully added";
+        std::cout<< "$"<<tmp[0] << " amount of funding successfully added";
     }
     else if (reputation_>=0) {
         std::cout<< "School reputation is increased by "<< tmp[1];

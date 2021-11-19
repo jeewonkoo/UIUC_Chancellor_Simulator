@@ -5,7 +5,6 @@
 #include "monthlyReport.hpp"
 #include <iostream>
 #include <queue>
-
 class School {
     public:
     School() = default;

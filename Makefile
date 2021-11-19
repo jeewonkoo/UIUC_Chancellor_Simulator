@@ -1,18 +1,17 @@
 CXX=clang++
-INCLUDES=-Iincludes/
-CXX_FLAGS=-std=c++20 -g -Wall -Wextra -Werror -pedantic $(INCLUDES)
+INCLUDES=-Iincludes/ -I/usr/include/cppconn -L/usr/lib/mysqlcppconn -lmysqlcppconn
+CXXEXTRAS=-Wall -Wextra -Werror -pedantic
+CXXFLAGS=-std=c++20 -g -fstandalone-debug
 
-exec: main.o
-	$(CXX) $(CXX_FLAGS) obj/*.o -o bin/exec
+exec: bin/exec
 
-main.o: src/main.cc school.o includes/*.hpp
-	$(CXX) $(CXX_FLAGS) -c src/main.cc -o obj/main.o
-
-school.o: src/school.cc includes/school.hpp
-	$(CXX) $(CXX_FLAGS) -c src/school.cc -o obj/school.o
+bin/exec: ./src/main.cc ./src/database.cc ./src/school.cc
+	$(CXX) $(CXXFLAGS) $(CXXEXTRAS) $(INCLUDES) $^ -o $@
 
 .DEFAULT_GOAL := exec
-.PHONY: clean exec
+.PHONY: clean exec tests
 
 clean:
-	rm -fr bin/* obj/*
+	rm -rf bin/* obj/*
+
+	
