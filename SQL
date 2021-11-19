@@ -1,26 +1,34 @@
--- Create a new database called 'TutorialDB'
--- Connect to the 'master' database to run this snippet
-USE master
-GO
-IF NOT EXISTS (
-   SELECT name
-   FROM sys.databases
-   WHERE name = N'EventDB'
-)
-CREATE DATABASE [EventDB]
-GO
-
--- Create a new table called 'TableName' in schema 'SchemaName'
--- Drop the table if it already exists
-IF OBJECT_ID('Events', 'U') IS NOT NULL
-DROP TABLE TableName
-GO
--- Create the table in the specified schema
-CREATE TABLE TableName
+CREATE TABLE Events
 (
-   EventId INT NOT NULL PRIMARY KEY, -- primary key column
-   Question [NVARCHAR](50) NOT NULL,
-   Column2 [NVARCHAR](50) NOT NULL
-   -- specify more columns here
-);
-GO
+    Id INT IDENTITY PRIMARY KEY,
+    Text NVARCHAR(128) NOT NULL,
+    Funding1 INT NOT NULL,
+	Funding2 INT NOT NULL,
+	Funding3 INT NOT NULL,
+	StudentLife1 INT NOT NULL,
+	StudentLife2 INT NOT NULL,
+	StudentLife3 INT NOT NULL,
+	Reputation1 INT NOT NULL,
+	Reputation2 INT NOT NULL,
+	Reputation3 INT NOT NULL,
+	AddRemove NVARCHAR(128) NOT NULL, 
+	FacultyName NVARCHAR(128) NOT NULL,
+	Future1 INT NOT NULL,
+	Future2 INT NOT NULL,
+	Future3 INT NOT NULL,
+	Multiplier1 INT NOT NULL,
+	Multiplier2 INT NOT NULL,
+	Multiplier3 INT NOT NULL,
+	Random NVARCHAR(128) NOT NULL,
+	Repeatable NVARCHAR(128) NOT NULL
+
+)
+
+
+SET IDENTITY_INSERT [dbo].[Events] ON
+
+INSERT INTO [dbo].[Events] (Id,Text,Funding1,Funding2,Funding3, StudentLife1, StudentLife2,StudentLife3,Reputation1,Reputation2,Reputation3,AddRemove,FacultyName,Future1,Future2,Future3,Multiplier1,Multiplier2,Multiplier3,Random,Repeatable)
+VALUES(0,'Choose Acceptance rates for next year \n\1. Low acceptance rates \n 2. High acceptance rates \n 3. reject everyone  for fun',-10,20,-100,30,-10,100,0,0,-70,'NULL', 'NULL', -1,-1,-1,1,1,1,'TRUE','FALSE');
+
+SELECT TOP 1 Id FROM [dbo].[Events]
+ORDER BY NEWID()

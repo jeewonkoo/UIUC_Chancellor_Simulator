@@ -66,6 +66,12 @@
         "locale": "cpp",
         "queue": "cpp",
         "map": "cpp",
-        "__tree": "cpp"
+        "__tree": "cpp",
+        "complex": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "set": "cpp",
+        "cinttypes": "cpp",
+        "typeindex": "cpp"
     }
 }
