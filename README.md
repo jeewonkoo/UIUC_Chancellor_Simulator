@@ -20,7 +20,7 @@ How would you promote the school if one day you are elected as the chancellor? P
 
 Every day there will be new coming emails regarding recent events. Players will make decisions on events, which will either positively or negatively impacting the school as reflected in the 4 primary stats.
 
-The **email interface** will be implemented through console input and output. Every day there will be a new-coming event determined by a randomized function that extracts a random event from the **event database**. Each event player will be given multiple options to decide from.
+The **email interface** will be implemented through console input and output. Every day there will be a new-coming event determined by a randomized function that extracts a random event from the **event database**. Every event is behaved as a tree with possible mutiple future events as branches. For each event, player will be given multiple options to decide from.
 
 The **decision making function** will be implemented additively to reflect impacts on the 4 primary stats player made through the decision. It is also responsible for checking if the game has come an end.
 
