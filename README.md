@@ -26,13 +26,13 @@ The **decision making function** will be implemented additively with a threshhol
 
 There will be an **event database** which is an Relational database seperate from the c++ code. The main program will be able to at random get events from the event table
 
-#BUILD INSTRUCTIONS
+# BUILD INSTRUCTIONS
 
 Use 
-'''
+```
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install mysqlclient
 sudo apt-get install libmysqlcppconn-dev
-'''
+```
 
