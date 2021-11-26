@@ -1,6 +1,6 @@
 CXX=clang++
-INCLUDES=-Iincludes/ -I/usr/include/cppconn -L/usr/lib/mysqlcppconn -lmysqlcppconn
-CXXEXTRAS=-Wall -Wextra -Werror -pedantic
+INCLUDES= -I/usr/include/cppconn -L/usr/lib/mysqlcppconn -lmysqlcppconn -Iincludes/
+CXXEXTRAS=-Wall -Wextra -Werror -pedantic 
 CXXFLAGS=-std=c++20 -g -fstandalone-debug
 
 exec: bin/exec

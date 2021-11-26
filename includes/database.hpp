@@ -1,4 +1,6 @@
 #include <vector>
+#include <set>
+
 #include "event.hpp"
 #include </usr/include/mysql_connection.h>
 #include "/usr/include/cppconn/driver.h"
@@ -9,7 +11,6 @@ class Database {
 public:
 
   Database();
-	std::vector<int> visited_ids;
  Event* getRandomEvent();
  Event* getEventbyID(int id);
 private:
@@ -17,5 +18,6 @@ private:
     sql::Connection *con;
 	sql::Statement *stmt;
 	sql::ResultSet *result;
+	std::set<int> visited_ids;
 
 };
