@@ -11,5 +11,14 @@
 using namespace std;
 int main() {
 Database* d = new Database();
-std::cout <<d;
+Event* g = d->getEventbyID(1);
+Event* f = d->getRandomEvent();
+
+
+School* s = new School();
+std::cout << s->GetReputation();
+std::cout << f->id;
+std::cout << g->id;
+
+return 0;
     }

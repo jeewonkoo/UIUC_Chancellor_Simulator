@@ -19,7 +19,6 @@
 			"args": [
 				"${workspaceFolder}/bin/exec",
 				"/home/vagrant/bin/",
-				"${workspaceFolder}/mysql-connector-c++-8.0.27-winx64/include"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
@@ -46,7 +45,7 @@
 			"args": [
 				"${workspaceFolder}/bin/tests",
 				"/home/vagrant/bin/",
-				"${workspaceFolder}/mysql-connector-c++-8.0.27-winx64/include"
+                "/usr/include/cppconn/"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"

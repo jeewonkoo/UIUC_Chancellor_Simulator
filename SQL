@@ -22,13 +22,12 @@ CREATE TABLE Events
 	Random NVARCHAR(128) NOT NULL,
 	Repeatable NVARCHAR(128) NOT NULL
 
-)
+);
 
 
-SET IDENTITY_INSERT [dbo].[Events] ON
+SET IDENTITY_INSERT Events ON;
 
-INSERT INTO [dbo].[Events] (Id,Text,Funding1,Funding2,Funding3, StudentLife1, StudentLife2,StudentLife3,Reputation1,Reputation2,Reputation3,AddRemove,FacultyName,Future1,Future2,Future3,Multiplier1,Multiplier2,Multiplier3,Random,Repeatable)
-VALUES(0,'Choose Acceptance rates for next year \n\1. Low acceptance rates \n 2. High acceptance rates \n 3. reject everyone  for fun',-10,20,-100,30,-10,100,0,0,-70,'NULL', 'NULL', -1,-1,-1,1,1,1,'TRUE','FALSE');
+INSERT INTO Events (Id,Text,Funding1,Funding2,Funding3, StudentLife1, StudentLife2,StudentLife3,Reputation1,Reputation2,Reputation3,AddRemove,FacultyName,Future1,Future2,Future3,Multiplier1,Multiplier2,Multiplier3,Random,Repeatable)VALUES(2,"""Micheal Nowak and his research team received award \n 1. fire him because he's just too good \n 2. invest more in his research \n  3. do nothing """,-20,-40,0,50,-10,0,65,-50,-10,"""null""","""null""",-1,-1,-1,1,1,1,"""FALSE""","""FALSE""");
 
 SELECT TOP 1 Id FROM [dbo].[Events]
 ORDER BY NEWID()
