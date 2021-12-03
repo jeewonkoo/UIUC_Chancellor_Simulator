@@ -14,4 +14,5 @@ bin/exec: ./src/main.cc ./src/database.cc ./src/school.cc
 clean:
 	rm -rf bin/* obj/*
 
-	
+tests: tests/tests.cc ./src/main.cc ./src/database.cc ./src/school.cc
+	$(CXX) $(CXXFLAGS) $(CXXEXTRAS) $(INCLUDES) $^ -o $@

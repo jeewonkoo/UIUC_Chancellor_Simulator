@@ -3,6 +3,12 @@
 std::vector<std::string> School::GetFaculty(){return faculty_;}
 void School::AddFaculty(std::string name){faculty_.push_back(name);}
 void School::RemoveFaculty(std::string name){
+    if (faculty_.size() == 0) {
+        throw std::invalid_argument("Facuty is empty");
+    }
+    if (!(std::find(faculty_.begin(), faculty_.end(), name) != faculty_.end())){
+        throw std::invalid_argument("There is no faculty");
+    } 
     for (size_t a=0; a<faculty_.size(); ++a) {
         if (faculty_[a]==name) {
             faculty_.erase(faculty_.begin()+a);
@@ -10,6 +16,7 @@ void School::RemoveFaculty(std::string name){
         }
     }
 }
+int School::GetFacultySize(){return faculty_.size();}
 int School::GetFunding(){return funding_;}
 int School::GetReputation(){return reputation_;}
 int School::GetStudent_life(){return student_life_;}
