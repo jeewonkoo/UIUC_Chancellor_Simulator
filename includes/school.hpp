@@ -5,12 +5,14 @@
 #include "monthlyReport.hpp"
 #include <iostream>
 #include <queue>
+#include <algorithm>
 class School {
     public:
     School() = default;
     std::vector<std::string> GetFaculty();
     void AddFaculty(std::string name);
     void RemoveFaculty(std::string name);
+    int GetFacultySize();
 	int GetFunding();
 	int GetReputation();
 	int GetStudent_life();
