@@ -12,26 +12,26 @@ Players in the game are to maximize various factors on campus to succeed. The ga
 
 ##  
 <div align=center>
-	:chart_with_upwards_trend: Primary Statistics :chart_with_downwards_trend:
+	:chart_with_upwards_trend: **Primary Statistics** :chart_with_downwards_trend:
 	</br></br>
-    :moneybag: Funding :moneybag: </br>
+    :moneybag: **Funding** :moneybag: </br>
     Alumni </br>
     State Funding
     </br>
     </br>
-    :mortar_board: Reputation :mortar_board: </br>
+    :mortar_board: **Reputation** :mortar_board: </br>
     US news ranking </br>
     Employment rate </br>
-    Honors and awards </br>
+    Honors and awards 
     </br>
     </br>
-    :school_satchel: Student Life :school_satchel: </br>
+    :school_satchel: **Student Life** :school_satchel: </br>
     Campus safety </br>
     Living conditions </br>
     Food </br>
-    Education Quality </br>
+    Education Quality 
     </br></br>
-    :school: Faculty :school: </br>
+    :school: **Faculty** :school: </br>
     Members </br>
     Research </br>
     
@@ -57,6 +57,3 @@ install the mysql connector library
 ```
 sudo apt-get install libmysqlcppconn-dev
 ```
-
-
-
