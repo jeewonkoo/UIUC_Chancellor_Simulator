@@ -60,6 +60,7 @@ Linux:
 sudo apt-get install libmysqlcppconn-dev
 ```
 Windows:
+
 https://www.mysql.com/products/connector/
 
 Mac users don't matter
