@@ -1,24 +1,40 @@
-# UIUC Chancellor Simulator
+# 
+<div align=center>
+
+  \
+	![header](https://capsule-render.vercel.app/api?type=waving&&color=timeAuto&width=400&height=300&section=header&text=UIUC%20Chancellor%20Simulator&fontSize=57&fontAlignY=37&desc=CS128+Final+Project&descAlign=50&descAlignY=57&animation=twinkling)
+</div>
+
+
 How would you promote the school if one day you are elected as the chancellor? Players in the game are to maximize various factors on campus to succeed. The game constitutes of **4 primary stats** structured as below.
 
-##### Primary Statistics
-* Funding
-    * Alumi
-    * State Funding
-* Reputation
-    * US news ranking
-    * Employment rate
-    * Honors and awards
-* Student Life
-    * Campus safety
-    * Living conditions
-    * Food
-    * Education Quality
-* Faculty
-    * members
-    * research
+<div align=center>
+	:chart_with_upwards_trend: Primary Statistics :chart_with_downwards_trend:
+
+    :moneybag: Funding :moneybag:
+    Alumni
+    State Funding
+    
+    :mortar_board: Reputation :mortar_board:
+    US news ranking
+    Employment rate
+    Honors and awards
+    
+    :school_satchel: Student Life :school_satchel:
+    Campus safety
+    Living conditions
+    Food
+    Education Quality
+    
+    :school: Faculty :school:
+    Members
+    Research 
+    
+</div>
+
 
 Every day there will be new coming emails regarding recent events. Players will make decisions on events, which will either positively or negatively impacting the school as reflected in the 4 primary stats.
+
 
 The **email interface** will be implemented through console input and output. Every day there will be a new-coming event determined by a randomized function that extracts a random event from the **event database**. Every event is behaved as a tree with possible mutiple future events as branches. For each event, player will be given multiple options to decide from.
 
@@ -32,4 +48,3 @@ install the mysql connector library
 ```
 sudo apt-get install libmysqlcppconn-dev
 ```
-
