@@ -54,6 +54,12 @@ There will be an **event database** which is an Relational database seperate fro
 # BUILD INSTRUCTIONS
 
 install the mysql connector library 
+
+Linux:
 ```
 sudo apt-get install libmysqlcppconn-dev
 ```
+Windows:
+https://www.mysql.com/products/connector/
+
+Mac users don't matter
