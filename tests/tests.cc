@@ -10,6 +10,9 @@
 #include "event.hpp"
 #include "monthlyReport.hpp"
 #include "school.hpp"
+#include <iostream>
+
+using namespace std;
 
 TEST_CASE("ADD FACULTY") {
     School s; 
@@ -66,3 +69,33 @@ TEST_CASE("GET FACULTY") {
     REQUIRE(s==v);
 }   
 //If event is not repeatable but called twice, false 
+
+TEST_CASE("GET FACULTY SIZE") {
+    School s; 
+    s.AddFaculty("Professor Nowak");
+    s.AddFaculty("Professor Greg");
+    s.AddFaculty("Professor Lee");
+    int t = s.GetFacultySize();
+    REQUIRE(t == 3);
+} 
+
+TEST_CASE("CHECKING EVENT IMPACT") {
+Database* database = new Database();
+Event* curr = database->getRandomEvent();
+
+School* school = new School();
+    school->Decide(curr);
+    if (curr->AddRemove) {
+        bool add = true;
+        for (int a=0; a<school->GetFacultySize(); ++a) {
+            if (curr->faculty==school->GetFaculty()[a]) {
+                school->RemoveFaculty(curr->faculty);
+                add = false;
+            }
+        }
+        if (add) {
+            school->AddFaculty(curr->faculty);
+        }
+    }
+    REQUIRE(t == 3);
+} 

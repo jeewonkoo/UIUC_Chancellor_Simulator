@@ -12,10 +12,10 @@ class School {
     std::vector<std::string> GetFaculty();
     void AddFaculty(std::string name);
     void RemoveFaculty(std::string name);
-    int GetFacultySize();
-	int GetFunding();
-	int GetReputation();
-	int GetStudent_life();
+    int GetFacultySize() const;
+	int GetFunding() const;
+	int GetReputation() const;
+	int GetStudent_life() const;
 	void SetFunding(int funding);
 	void SetReputation(int reputation);
 	void SetStudent_life(int student_life);
