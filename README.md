@@ -15,15 +15,13 @@ Players in the game are to maximize various factors on campus to succeed. The ga
 	:chart_with_upwards_trend: Primary Statistics :chart_with_downwards_trend:
 	</br></br>
     :moneybag: Funding :moneybag: </br>
- 
     </br>
     :mortar_board: Reputation :mortar_board: </br>
-    
     </br>
     :school_satchel: Student Life :school_satchel: </br>
     </br>
     :school: Faculty :school: </br>
-    Members </br>
+
     
 </div>
 
