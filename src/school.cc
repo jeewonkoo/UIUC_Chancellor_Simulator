@@ -1,6 +1,7 @@
 #include "../includes/school.hpp"
 
 std::vector<std::string> School::GetFaculty(){return faculty_;}
+int School::GetID() {return nextID;}
 void School::AddFaculty(std::string name){faculty_.push_back(name);}
 void School::RemoveFaculty(std::string name){
     if (faculty_.size() == 0) {
@@ -29,18 +30,32 @@ void School::Decide(Event* event){
     std::cout<<std::endl<<event->text<<std::endl;
     std::cin >> user_input;
     std::vector<int> tmp = event->impact[user_input];
+    std::cout<< std::endl;
+    std::cout<< "current funding: "<< funding_ << " + ("<<tmp[0]<<")" << std::endl;
+    std::cout<< "current reputation: "<< reputation_<< " + ("<<tmp[1]<<")"<<std::endl;
+    std::cout<< "current student life: "<< student_life_<<" + ("<<tmp[2]<<")"<<std::endl;
+    std::cout<<"current faculty available: ";
+    for (size_t a=0; a< faculty_.size(); ++a) {
+        std::cout<<faculty_[a]<<" ";
+    }
+    if (faculty_.size()==0) {
+        std::cout<< "dumbass u dont even have a professor, what u expecting??????" << std::endl;
+    }
+    std::cout<<std::endl;
     funding_+= tmp[0];
     reputation_ += tmp[1];
     student_life_+=tmp[2];
-    if (funding_>=0) {
-        std::cout<< "$"<<tmp[0] << " amount of funding successfully added"<<std::endl;
-    }
-    else if (reputation_>=0) {
-        std::cout<< "School reputation is increased by "<< tmp[1]<<std::endl;
-    }
-    else if (student_life_>=0) {
-        std::cout<<"Student life is increased by " << tmp[2]<<std::endl;
-    }
+    nextID = tmp[3];
+
+    // if (funding_>=0) {
+    //     std::cout<< "$"<<tmp[0] << " amount of funding successfully added"<<std::endl;
+    // }
+    // else if (reputation_>=0) {
+    //     std::cout<< "School reputation is increased by "<< tmp[1]<<std::endl;
+    // }
+    // else if (student_life_>=0) {
+    //     std::cout<<"Student life is increased by " << tmp[2]<<std::endl;
+    // }
     if (funding_<0) {
         std::cout<<"sucker u fkup the school funding"<<std::endl;
     }
@@ -50,6 +65,7 @@ void School::Decide(Event* event){
     else if (student_life_<0) {
         std::cout<<"students can no longer tolerate what u have done, they decided to execute u"<<std::endl;
     }
+    
 }
 void School::SeeFaculty(){
     for (size_t a=0; a<faculty_.size(); ++a) {
