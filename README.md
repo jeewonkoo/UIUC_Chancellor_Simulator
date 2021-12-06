@@ -50,17 +50,46 @@ The **decision making function** will be implemented additively to reflect impac
 There will be an **event database** which is an Relational database seperate from the c++ code. The main program will be able to at random get events from the event table
 
 ## 
+<div align=center>
 
-# BUILD INSTRUCTIONS
+  \
+	![header](https://capsule-render.vercel.app/api?type=rounded&&color=timeAuto&width=400&height=200&section=header&text=BUILD%20INSTRUCTIONS&fontSize=57&fontAlignY=50&&descAlign=50&descAlignY=55&descSize=21&animation=twinkling)
+</div>
 
-install the mysql connector library 
+# 
+<div align=center>
 
-Linux:
+To install the mysql connector library :
+</br></br>
+<img src="https://img.shields.io/badge/mac%20OS-000000?style=for-the-badge&logo=MacOS&logoColor=white"></br>
+```
+You are all set
+```
+</br>
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=Linux&logoColor=white">
+</br></br>
+
 ```
 sudo apt-get install libmysqlcppconn-dev
 ```
-Windows:
 
-https://www.mysql.com/products/connector/
+</br>
 
-Mac users don't matter
+[![Click Me](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=Windows&logoColor=white)](https://www.mysql.com/products/connector/)
+```
+Click Windows badge above 
+
+or
+
+Use this link: https://www.mysql.com/products/connector/
+```
+
+</div>
+
+## 
+
+<div align=center>
+ 
+  :sparkles: [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjeewonkoo&count_bg=%23FF7B00&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/cs128-2021c/final-project-nowak-s-toewax) :sparkles:
+  
+</div>
