@@ -98,15 +98,16 @@ Event* Database::getEventbyID(int id){
   		return e; //Handle Failiure
 
 
-		  	 if(!(result->getString("Random") == "TRUE" && (result->getString("Repeatable") == "TRUE" || visited_ids.find(e->id = result->getInt("ID")) == visited_ids.end()) ) ){
+		  	 if((result->getString("Repeatable") == "FALSE" && visited_ids.find(e->id = result->getInt("ID")) != visited_ids.end()) ){
 					return e;
 			}
 
 		bool addremove;
-		if(result->getString("AddRemove") == "ADD") {
-			addremove = true;
+		addremove = true;
+		if(result->getString("AddRemove") == "null") {
+			addremove = false;
 		}
-		addremove = false;
+		
 		
 		e->id = result->getInt("ID");
 		e->text = result->getString("Text");
