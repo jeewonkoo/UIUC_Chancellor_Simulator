@@ -12,7 +12,6 @@ using namespace std;
 int main() {
 Database* database = new Database();
 Event* curr = database->getRandomEvent();
-curr = database->getEventbyID(22);
 School school;
 while (curr&&school.GetFunding()>=0&&school.GetReputation()>=0&&school.GetStudent_life()>=0) {
     school.Decide(curr);
