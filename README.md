@@ -15,25 +15,15 @@ Players in the game are to maximize various factors on campus to succeed. The ga
 	:chart_with_upwards_trend: Primary Statistics :chart_with_downwards_trend:
 	</br></br>
     :moneybag: Funding :moneybag: </br>
-    Alumni </br>
-    State Funding
-    </br>
+ 
     </br>
     :mortar_board: Reputation :mortar_board: </br>
-    US news ranking </br>
-    Employment rate </br>
-    Honors and awards 
-    </br>
+    
     </br>
     :school_satchel: Student Life :school_satchel: </br>
-    Campus safety </br>
-    Living conditions </br>
-    Food </br>
-    Education Quality 
-    </br></br>
+    </br>
     :school: Faculty :school: </br>
     Members </br>
-    Research </br>
     
 </div>
 
@@ -47,7 +37,7 @@ The **email interface** will be implemented through console input and output. Ev
 
 The **decision making function** will be implemented additively to reflect impacts on the 4 primary stats player made through the decision. It is also responsible for checking if the game has come an end.
 
-There will be an **event database** which is an Relational database seperate from the c++ code. The main program will be able to at random get events from the event table
+There will be an **event database** which is an Relational MYSQL database seperate from the c++ code hosted on Azure. The main program will be able to at random get events and get events by id from the event table
 
 ## 
 <div align=center>
