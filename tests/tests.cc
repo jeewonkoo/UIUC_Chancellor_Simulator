@@ -34,42 +34,6 @@ TEST_CASE("REMOVE FACULTY") {
         REQUIRE(s.GetFacultySize()==2);
         REQUIRE_FALSE(s.GetFacultySize()==3);
     }
-
-    SECTION("REMOVE WHEN IT IS EMPTY"){
-        School s;
-        wchar_t message[200];
-        try {
-            s.RemoveFaculty("Professor Nowak");
-            _swprintf(message, L"No exception for input %g", v);
-            Assert::Fail(message, LINE_INFO());
-        }
-        catch (std::invalid_argument ex) {
-            continue;
-        }
-        catch (std::out_of_range ex) {
-            _swprintf(message, L"Incorrect exception for %g", v);
-            Assert::Fail(message, LINE_INFO());
-        }
-    }
-
-    SECTION("REMOVE WHEN NON_EXIST FACULTY") {
-        School s; 
-        s.AddFaculty("Professor Nowak");
-        s.AddFaculty("Professor Greg");
-        s.AddFaculty("Professor Lee");
-        try {
-            s.RemoveFaculty("Professor Koo");
-            _swprintf(message, L"No exception for input %g", v);
-            Assert::Fail(message, LINE_INFO());
-        }
-        catch (std::invalid_argument ex) {
-            continue;
-        }
-        catch (std::out_of_range ex) {
-            _swprintf(message, L"Incorrect exception for %g", v);
-            Assert::Fail(message, LINE_INFO());
-        }
-    }
 }
 
 TEST_CASE("GET FACULTY") {
@@ -86,38 +50,23 @@ TEST_CASE("GET FACULTY") {
 
 TEST_CASE("GET FUNDING") {
     School s;
-    REQUIRE(s.GetFunding() == 0);
-    REQUIRE_FALSE(s.GetFunding() == 100);
+    REQUIRE(s.GetFunding() == 100);
+    REQUIRE_FALSE(s.GetFunding() == 0);
 }
 
 TEST_CASE("GET REPUTATION") {
     School s;
-    REQUIRE(s.GetReputation() == 0);
-    REQUIRE_FALSE(s.GetReputation() == 100);
+    REQUIRE(s.GetReputation() == 100);
+    REQUIRE_FALSE(s.GetReputation() == 0);
 }
 
 TEST_CASE("GET STUDENT_LIFE") {
     School s;
-    REQUIRE(s.GetStudent_life() == 0);
-    REQUIRE_FALSE(s.GetStudent_life() == 100);
+    REQUIRE(s.GetStudent_life() == 100);
+    REQUIRE_FALSE(s.GetStudent_life() == 0);
 }
 
-TEST_CASE("GET MONTHLY REPORT") {
-    School s;
-    MonthlyReport mthly_report = {
-        0, // ranking
-        0, // funding
-        0, //student_life
-        0, //alumni_donation
-        0, // month
-        0, //funding different
-        0, //student life diff
-        ""; // progress
-        ""; //breaking news
-    };
-    MonthlyReport monthly_report = s.GetMonthlyReport();
-    REQUIRE(mthly_report == monthly_report);
-}
+
 
 TEST_CASE("SET FUNDING") {
     School s;
@@ -154,23 +103,37 @@ TEST_CASE("GET FACULTY SIZE") {
     REQUIRE(t == 3);
 } 
 
-TEST_CASE("CHECKING EVENT IMPACT") {
+TEST_CASE("GETRANDOM"){
+
 Database* database = new Database();
 Event* curr = database->getRandomEvent();
 
-School* school = new School();
-    school->Decide(curr);
-    if (curr->AddRemove) {
-        bool add = true;
-        for (int a=0; a<school->GetFacultySize(); ++a) {
-            if (curr->faculty==school->GetFaculty()[a]) {
-                school->RemoveFaculty(curr->faculty);
-                add = false;
-            }
-        }
-        if (add) {
-            school->AddFaculty(curr->faculty);
-        }
-    }
-    REQUIRE(t == 3);
-} 
+REQUIRE(curr->id != -1);
+REQUIRE(curr->text != "");
+
+
+}
+
+
+TEST_CASE("GETByID"){
+
+Database* database = new Database();
+Event* curr = database->getEventbyID(6);
+
+REQUIRE(curr->id == 6);
+REQUIRE(curr->impact[1][0] == -10);
+REQUIRE(curr->faculty == "null");
+
+
+}
+
+TEST_CASE("GETByID Not Found"){
+
+Database* database = new Database();
+Event* curr = database->getEventbyID(99999);
+
+REQUIRE(curr->id == -1);
+
+
+
+}

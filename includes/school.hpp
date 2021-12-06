@@ -12,16 +12,17 @@ class School {
     std::vector<std::string> GetFaculty();
     void AddFaculty(std::string name);
     void RemoveFaculty(std::string name);
-    int GetFacultySize() const;
-	int GetFunding() const;
-	int GetReputation() const;
-	int GetStudent_life() const;
+    int GetFacultySize();
+	int GetFunding();
+	int GetReputation();
+	int GetStudent_life();
 	void SetFunding(int funding);
 	void SetReputation(int reputation);
 	void SetStudent_life(int student_life);
     void Decide(Event* event);
     void SeeFaculty();
     int GetID();
+
     MonthlyReport GetMonthlyReport();
 
     private:
