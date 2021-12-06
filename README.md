@@ -63,7 +63,7 @@ To install the mysql connector library :
 </br></br>
 <img src="https://img.shields.io/badge/mac%20OS-000000?style=for-the-badge&logo=MacOS&logoColor=white"></br>
 ```
-You are all set
+mac users don't matter
 ```
 </br>
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=Linux&logoColor=white">
